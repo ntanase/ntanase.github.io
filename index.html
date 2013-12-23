@@ -35,10 +35,10 @@
           <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></span>
         </div>
         
-        <h4>
+        <h3>
         Drag the bookmarklet to your bookmarks bar and use it on sites with lots of images: 
         <a style="display: inline; border: 1px solid black; background-color: blue; color: yellow; text-decoration: none" href="javascript:var ST%3D(function()%7Bthis.create%3Dfunction()%7Bvar jsCode %3D document.createElement('script')%3BjsCode.setAttribute('src'%2C 'https%3A%2F%2Fwww.google.com%2Fjsapi%3Fcallback%3DST.swap')%3Bdocument.body.appendChild(jsCode)%3B%7D%3Bthis.swap%3Dfunction()%7Bgoogle.load('search'%2C '1'%2C %7B'callback' %3A OnLoad%7D)%3Bvar page%3D0%3Bvar search_result_images%3D%5B%5D%3Bfunction searchComplete(searcher)%7Bif (searcher.results %26%26 searcher.results.length > 0) %7Bvar results %3D searcher.results%3Bfor (var i %3D 0%3B i < results.length%3B i%2B%2B) %7Bvar result %3D results%5Bi%5D%3Bsearch_result_images.push(result.tbUrl)%3Bconsole.log(result.tbUrl)%3B%7Dvar cursor %3D searcher.cursor%3Bpage%2B%2B%3Bif (page < cursor.pages.length)searcher.gotoPage(page)%3Belse%7Bfor(var i %3D 0%3B i< document.images.length%3B i%2B%2B)%7Bdocument.images%5Bi%5D.src%3Dsearch_result_images%5BMath.floor((Math.random()*search_result_images.length))%5D%3B%7D%7D%7D%7Dfunction OnLoad()%7BimageSearch %3D new google.search.ImageSearch()%3BimageSearch.setSearchCompleteCallback(this%2C searchComplete%2C %5BimageSearch%5D)%3BimageSearch.execute('cats'  )%3B%7D%7D%3Breturn %7Bcreate%3Acreate%2Cswap%3Aswap%7D%3B%7D)()%3BST.create()">Catifier 9000</a>
-        </h4>
+        </h3>
 </section>
 
     </div>
